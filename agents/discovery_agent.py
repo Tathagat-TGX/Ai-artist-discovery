@@ -7,7 +7,7 @@ from tools.google_search import search_instagram_profiles
 logging.basicConfig(level=logging.INFO)
 
 
-# ---------- Helpers ----------
+
 
 def extract_category(query):
     q = query.lower()
@@ -63,7 +63,7 @@ def get_instagram_name(profile_url):
         return None
 
 
-# ---------- Discovery Agent ----------
+
 
 def run_discovery():
 
@@ -83,13 +83,13 @@ def run_discovery():
 
         for link in links:
 
-            # Extract username from URL
+           
             try:
                 username = link.split("/")[3]
             except:
                 continue
 
-            # Try scraping real name
+           
             real_name = get_instagram_name(link)
 
             if real_name is None or real_name == "":
@@ -108,7 +108,7 @@ def run_discovery():
 
     df = pd.DataFrame(artists)
 
-    # Remove duplicates
+    
     df = df.drop_duplicates(subset=["instagram"])
 
     df.to_csv("data/artists_raw.csv", index=False)

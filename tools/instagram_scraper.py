@@ -2,7 +2,7 @@ import instaloader
 import re
 import time
 
-# create loader
+
 L = instaloader.Instaloader()
 
 
@@ -23,7 +23,7 @@ def extract_contact_info(username):
         posts = profile.mediacount
         website = profile.external_url
 
-        # email detection
+        
         email_match = re.search(
             r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", bio
         )
@@ -31,7 +31,7 @@ def extract_contact_info(username):
         if email_match:
             email = email_match.group(0)
 
-        # phone detection
+        
         phone_match = re.search(
             r"\+?\d[\d\s\-]{8,15}", bio
         )
@@ -39,7 +39,7 @@ def extract_contact_info(username):
         if phone_match:
             phone = phone_match.group(0)
 
-        # small delay to avoid instagram blocking
+        
         time.sleep(3)
 
     except Exception as e:

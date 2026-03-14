@@ -74,6 +74,8 @@ Ai-artist-discovery
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+
 ⚙️ Full Setup & Run
 1️⃣ Clone repository
 git clone https://github.com/Tathagat-TGX/Ai-artist-discovery.git

@@ -5,14 +5,19 @@ An AI-powered multi-agent pipeline that automatically discovers artists online, 
 The system simulates how a talent discovery team (e.g., event platforms, talent marketplaces) can scale artist discovery and onboarding using automation and intelligent prioritization.
 
 🚀 Quick Start (3 Commands)
+
 git clone https://github.com/Tathagat-TGX/Ai-artist-discovery.git
+
 cd Ai-artist-discovery
+
 pip install -r requirements.txt
+
 python run_pipeline.py
 
 Optional: run the dashboard
 
 streamlit run dashboard.py
+
 🧠 System Overview
 
 The system uses three specialized agents, each responsible for a stage in the discovery pipeline.
@@ -77,9 +82,13 @@ Ai-artist-discovery
 
 
 ⚙️ Full Setup & Run
+
 1️⃣ Clone repository
+
 git clone https://github.com/Tathagat-TGX/Ai-artist-discovery.git
+
 cd Ai-artist-discovery
+
 2️⃣ Create virtual environment
 
 Mac/Linux
@@ -91,10 +100,13 @@ Windows
 
 python -m venv venv
 venv\Scripts\activate
+
 3️⃣ Install dependencies
 pip install -r requirements.txt
+
 4️⃣ Run the pipeline
 python run_pipeline.py
+
 🤖 Agent Details
 Agent 1 — Artist Discovery
 
@@ -109,7 +121,9 @@ Search the web for artists and extract Instagram profiles.
 Example search queries:
 
 DJ India Instagram
+
 Singer India Instagram
+
 Anchor India Instagram
 
 Output
@@ -121,6 +135,7 @@ Example:
 name,instagram_url,category
 DJ Rahul,https://instagram.com/djrahul,dj
 Singer Meera,https://instagram.com/meerasings,singer
+
 Agent 2 — Profile Intelligence & Filtering
 
 File
@@ -225,11 +240,13 @@ data/outreach_queue.csv
 These files allow reviewers to validate pipeline outputs.
 
 🧪 Verification / What To Check
+
 Step 1
 
 Run pipeline
 
 python run_pipeline.py
+
 Step 2
 
 Verify output files exist
@@ -250,15 +267,25 @@ outreach_message
 contact_channel
 
 📋 Assignment Requirements Mapping
+
 Requirement	Implementation
+
 Artist discovery	agents/discovery_agent.py
+
 Instagram extraction	tools/google_search.py
+
 Profile enrichment	agents/intelligence_agent.py
+
 Email / phone extraction	tools/llm_analyzer.py
+
 Duplicate filtering	data/starclinch_existing.csv
+
 Outreach prioritization	agents/outreach_agent.py
+
 Outreach message generation	agents/outreach_agent.py
+
 Output datasets	data/*.csv
+
 🧪 What I Tested
 
 Pipeline tested with:
@@ -268,8 +295,11 @@ python run_pipeline.py
 Example result:
 
 10 artists discovered
+
 6 enriched with contact info
+
 5 added to outreach queue
+
 ⚠️ Known Limitations
 
 Instagram scraping may fail for private profiles
